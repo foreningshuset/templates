@@ -1,0 +1,66 @@
+{
+  "name": "templates",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://localhost:3000/",
+  "author": {
+    "name": "GPAE Portalen",
+    "url": "http://www.portalen.io",
+    "email": "kontakt@portalen.se"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "run-p start-js css-watch",
+    "start-js": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "deploy": "npm run build && gh-pages -d build",
+    "css": "run-s css-build css-compile css-prefix",
+    "css-watch": "run-p css-watch-dev css-watch-min",
+    "css-watch-dev": "npm run css-build -- --watch",
+    "css-watch-min": "npm run css-compile -- --watch",
+    "css-build": "node-sass-chokidar src/styles/index.scss src/styles/index.css",
+    "css-compile": "node-sass-chokidar --output-style compressed src/styles/index.scss src/styles/index.min.css",
+    "css-prefix": "postcss --no-map --use autoprefixer --output src/styles/index.min.css src/styles/index.min.css"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.51",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
+    "autoprefixer": "^9.8.5",
+    "bootstrap": "^5.0.0-alpha1",
+    "gh-pages": "^3.1.0",
+    "node-sass-chokidar": "^1.5.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1",
+    "typescript": "^3.9.7"
+  }
+}

@@ -1,0 +1,14 @@
+// Configuration
+@import "scss/functions";
+@import "scss/variables";
+@import "scss/mixins";
+@import "scss/vendor/bootstrap";
+@import "scss/resets";
+
+// Routes
+@import "scss/routes/Home";
+@import "scss/routes/Blog";
+@import "scss/routes/NotFound";
+
+// Components
+@import "scss/components/Post";
