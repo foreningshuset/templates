@@ -41,7 +41,7 @@ const App = (): JSX.Element => {
         
         <footer className="navbar fixed-bottom navbar-dark navbar-expand" style={{background: '#20232a'}}>
           <div className="container">
-            <NavLink to="/" className="navbar-brand">Template</NavLink>
+            <NavLink to="/" className="navbar-brand">Templates</NavLink>
 
             <Navigation routes={routes} />
           </div>
